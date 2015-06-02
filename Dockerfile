@@ -1,5 +1,6 @@
-FROM ubuntu:14.04
-MAINTAINER Spencer Herzberg <spencer.herzberg@gmail.com>
+FROM debian:jessie
+
+MAINTAINER Robert Gering "http://robertgering.de"
 
 RUN echo "deb http://deb.torproject.org/torproject.org trusty main" >> /etc/apt/sources.list
 RUN gpg --keyserver keys.gnupg.net --recv 886DDD89
