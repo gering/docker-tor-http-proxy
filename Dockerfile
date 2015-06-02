@@ -12,7 +12,7 @@ RUN apt-get update -qq && apt-get install -y supervisor privoxy deb.torproject.o
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Add custom configs
-ADD ./privoxy/ /etc/privoxy/
+ADD ./privoxy/config /etc/privoxy/config
 ADD ./tor/ /etc/tor/
 
 # Ports
