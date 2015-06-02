@@ -11,10 +11,9 @@ RUN apt-get update -qq && apt-get install -y supervisor privoxy deb.torproject.o
 # Add custom supervisor config
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Add custom config
-ADD ./privoxy/config /etc/privoxy/config
-ADD ./tor/torrc /etc/tor/torrc
-ADD ./tor/torsocks.conf /etc/torsocks.conf
+# Add custom configs
+ADD ./privoxy/ /etc/privoxy/
+ADD ./tor/ /etc/tor/
 
 # Ports
 EXPOSE 8118
